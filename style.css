@@ -18,7 +18,9 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 } 
+
 .home-section {
+    position: absolute;
     padding: 20px;
     background-color: #fff;
     margin: 20px auto;
@@ -33,4 +35,30 @@ body {
     max-width: 800px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.home-text  {
+    z-index: 90;
+    font-size: 1.2em;
+    line-height: 1.6;
+    position: relative;
+}
+.about-text {
+    z-index: 90;
+    font-size: 1.2em;
+    line-height: 1.6;
+    position: relative;
+}
+.contact-text {
+    z-index: 90;
+    font-size: 1.2em;
+    line-height: 1.6;
+    position: relative;
+} 
+img {
+    z-index: 0;
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
