@@ -9,28 +9,32 @@
 </head>
 
 <body>
-    <main class="quiz">
-        <header>
-            <h1>Quiz javascript</h1>
-            <p>Welcome to the JavaScript quiz!</p>
+    <main class="app">
+        <header class="app__header">
+            <h1>Quiz JavaScript</h1>
+            <p id="progress">Question 1 / 5</p>
         </header>
-        <section class="score">
 
-            <div>
-                <span class="question1  ">
-                    <h2> Question 1 sur 10</h2>
-                    <p>Quel est la capital de la France ?</p>
-                </span>
-                <ul class="answer1">
-                    <li><button name="q1" value="a"> a) Paris</button></li>
-                    <li><button name="q1" value="b"> b) Londres</button></li>
-                    <li><button name="q1" value="c"> c) Berlin</button></li>
-                </ul>
-            </div>
-            <button>suivant</button>
+        <section id="quiz-screen">
+            <h2 id="question">Que signifie HTML ?</h2>
+            <ul id="answers">
+                <li><button class="answer">HyperText Markup Language</button></li>
+                <li><button class="answer">High Tech Modern Language</button></li>
+                <li><button class="answer">HyperText Machine Language</button></li>
+                <li><button class="answer">Home Tool Markup Language</button></li>
+            </ul>
+            <p id="feedback"></p>
+            <button id="next-btn" hidden>Suivant</button>
+        </section>
 
+        <section id="result-screen" hidden>
+            <h2>Résultat</h2>
+            <p id="score"></p>
+            <button id="restart-btn">Rejouer</button>
+        </section>
     </main>
-    </section>
+
+    
 </body>
 
 </html>
