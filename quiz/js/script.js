@@ -47,6 +47,7 @@ const quizScreen   = document.getElementById("quiz-screen");
 const resultScreen = document.getElementById("result-screen");
 const scoreEl      = document.getElementById("score");
 const restartBtn   = document.getElementById("restart-btn");
+const studentNameEl = document.getElementById("student-name");
 
 /* ---------- Rendu ---------- */
 function renderQuestion() {
@@ -113,9 +114,19 @@ nextBtn.addEventListener("click", () => {
 function showResult() {
   quizScreen.hidden = true;
   resultScreen.hidden = false;
+
+  // Récupérer le nom et le prénom depuis localStorage
+  const prenom = localStorage.getItem("prenom");
+  const nom = localStorage.getItem("nom");
+
+  // Calcul du score
   const pct = Math.round((score / QUESTIONS.length) * 100);
+
+  // Afficher le nom avec le score
+  studentNameEl.textContent = `Étudiant : ${prenom} ${nom}`;
   scoreEl.textContent = `Score : ${score} / ${QUESTIONS.length} (${pct} %)`;
 }
+
 
 restartBtn.addEventListener("click", () => {
   currentIndex = 0;
@@ -127,3 +138,27 @@ restartBtn.addEventListener("click", () => {
 
 /* ---------- Démarrage ---------- */
 renderQuestion();
+const form = document.getElementById("student-form");
+const prenomInput = document.getElementById("prenom");
+const nomInput = document.getElementById("nom");
+const error = document.getElementById("error");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const prenom = prenomInput.value.trim();
+  const nom = nomInput.value.trim();
+
+  // Vérifier que les deux champs sont remplis
+  if (prenom === "" || nom === "") {
+    error.textContent = "⚠️ Veuillez entrer votre nom et votre prénom.";
+    error.style.display = "block";
+    return;
+  }
+
+  // Enregistrer les informations
+  localStorage.setItem("prenom", prenom);
+  localStorage.setItem("nom", nom);
+
+  
+});
