@@ -78,7 +78,12 @@ body {
   font: inherit;
   cursor: pointer;
 }
+
 #start-screen {
- font-size: 30px ;
-font-weight: bold;
+  font-size: 30px;
+  display: flex;
 }
+#prenom,#nom,#start{
+  font-size: 20px;
+}
+

@@ -132,7 +132,7 @@ restartBtn.addEventListener("click", () => {
   currentIndex = 0;
   score = 0;
   resultScreen.hidden = true;
-  quizScreen.hidden = false;
+  startQuizScreen.hidden = false;
   renderQuestion();
 });
 
@@ -142,6 +142,7 @@ const form = document.getElementById("student-form");
 const prenomInput = document.getElementById("prenom");
 const nomInput = document.getElementById("nom");
 const error = document.getElementById("error");
+const startQuizScreen=document.getElementById("start-screen");
 
 form.addEventListener("submit", function(event) {
   event.preventDefault();
@@ -160,5 +161,7 @@ form.addEventListener("submit", function(event) {
   localStorage.setItem("prenom", prenom);
   localStorage.setItem("nom", nom);
 
+startQuizScreen.hidden = true;
+  quizScreen.hidden = false;
   
 });

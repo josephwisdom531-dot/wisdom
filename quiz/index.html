@@ -17,19 +17,15 @@
             <p id="progress">Question 1 / 5</p>
         </header>
         <section id="start-screen">
-            <form id="student-form">
-                <input type="text" id="prenom" placeholder="Prénom">
-                <input type="text" id="nom" placeholder="Nom">
-
-                <p id="error"></p>
-
-                <button type="submit">Commencer le quiz</button>
-            </form>
-
             <P>Bienvenue au Quiz !</P>
+            <form id="student-form">
+                <input type="text" id="nom" placeholder="Nom">
+                <input type="text" id="prenom" placeholder="Prénom">
+                <p id="error"></p>
+                <button type="submit" id="start">Commencer le quiz</button>
+            </form>
         </section>
-
-        <section id="quiz-screen">
+        <section id="quiz-screen" hidden>
             <h2 id="question">Que signifie HTML ?</h2>
             <ul id="answers">
                 <li><button class="answer">HyperText Markup Language</button></li>
@@ -52,24 +48,24 @@
             <button id="restart-btn">Rejouer</button>
         </section>
         <div id="quiz-screen">
-  <p id="progress"></p>
-  <h2 id="question"></h2>
+            <p id="progress"></p>
+            <h2 id="question"></h2>
 
-  <ul id="answers"></ul>
+            <ul id="answers"></ul>
 
-  <p id="feedback" class="feedback"></p>
+            <p id="feedback" class="feedback"></p>
 
-  <button id="next-btn" hidden>Suivant</button>
-</div>
+            <button id="next-btn" hidden>Suivant</button>
+        </div>
 
-<div id="result-screen" hidden>
-  <h1>🎉 Résultat du quiz</h1>
+        <div id="result-screen" hidden>
+            <h1>🎉 Résultat du quiz</h1>
 
-  <p id="student-name"></p>
-  <p id="score"></p>
+            <p id="student-name"></p>
+            <p id="score"></p>
 
-  <button id="restart-btn">Recommencer</button>
-</div>
+            <button id="restart-btn">Recommencer</button>
+        </div>
 
     </main>
 
